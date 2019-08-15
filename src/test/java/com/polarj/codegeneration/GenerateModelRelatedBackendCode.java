@@ -23,11 +23,11 @@ public class GenerateModelRelatedBackendCode
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     // ****************************需要修改的部分******************************
-    private String srcFolder = getBasePath() + "/src/core/java/";
+    private String srcFolder = getBasePath() + "/src/youjia/java/";
 
-    private String modelPackage = "com.polarj.model";
+    private String modelPackage = "com.youjia.model";
 
-    private String modelName = "ModelInheritanceRel";
+    private String modelName = "WaterElectricityRecord";
     // *********************************************************************
 
     public static void main(String[] args)
@@ -61,7 +61,7 @@ public class GenerateModelRelatedBackendCode
             codeTypes.put("Repos", "repository");
             codeTypes.put("Service", "service");
             codeTypes.put("ServiceImpl", "service/impl");
-            // codeTypes.put("Controller", "controller");
+            codeTypes.put("Controller", "controller");
             for (String codeType : codeTypes.keySet())
             {
                 generateCodeByTemplate(mName, codeType, codeTypes.get(codeType));

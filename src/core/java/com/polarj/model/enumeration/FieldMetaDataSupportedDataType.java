@@ -20,6 +20,8 @@ public class FieldMetaDataSupportedDataType
 
     public final static String JSON = "json";
     
+    public final static String DATEMONTHFORMAT = "yyyy-MM";
+    
     public final static String DATEFORMAT = "yyyy-MM-dd";
 
     public final static String TIMEFORMAT = "yyyy-MM-dd hh:mm";

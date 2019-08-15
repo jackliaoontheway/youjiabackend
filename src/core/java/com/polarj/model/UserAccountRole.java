@@ -41,7 +41,7 @@ public @ToString @EqualsAndHashCode(callSuper = false) class UserAccountRole ext
     private @Getter @Setter String code;
 
     @I18nField
-    @FieldMetaData(position = 20, label = "Label", required = true, maxLength = 128)
+    @FieldMetaData(position = 20, label = "Label",  maxLength = 128)
     @Column(name = "label", length = 128)
     private @Getter @Setter String label;
 
@@ -61,8 +61,7 @@ public @ToString @EqualsAndHashCode(callSuper = false) class UserAccountRole ext
     private @Getter @Setter List<Functionality> functions;
 
     // 如果用户初始化为这个角色，那么用这个设置初始化用户的设置
-    @FieldMetaData(position = 40, label = "Default Setting", dataType = FieldMetaDataSupportedDataType.OBJECT,
-            required = true)
+   // @FieldMetaData(position = 40, label = "Default Setting", dataType = FieldMetaDataSupportedDataType.OBJECT)
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
     @JoinColumn(name = "userAccountConfigId",
             foreignKey = @ForeignKey(name = "FK_UserAccountRole_UserAccountConfig_Id"))

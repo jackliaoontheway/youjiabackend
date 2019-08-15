@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.polarj</groupId>
-  <artifactId>dragoncargo</artifactId>
+  <artifactId>youjiabackend</artifactId>
   <packaging>war</packaging>
   <version>0.5-SNAPSHOT</version>
-  <name>Dragon Cargo</name>
+  <name>You Jia</name>
   <url>http://maven.apache.org</url>
   <properties>
     <pinyin4j.version>2.5.1</pinyin4j.version>
@@ -235,9 +235,10 @@
             <configuration>
               <sources>
                 <source>${basedir}/src/core/java</source>
-                <source>${basedir}/src/cargo/java</source>
+<!--                 <source>${basedir}/src/cargo/java</source> -->
                 <source>${basedir}/src/workflow/java</source>
-                <source>${basedir}/src/hwcargo/java</source>
+                <source>${basedir}/src/youjia/java</source>
+<!--                 <source>${basedir}/src/hwcargo/java</source> -->
               </sources>
             </configuration>
           </execution>

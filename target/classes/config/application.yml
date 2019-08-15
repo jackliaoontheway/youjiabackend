@@ -33,7 +33,7 @@ workflow:
   datasource:
     url: jdbc:mysql://localhost:3306/dbcoppercore?autoReconnect=true&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
-    password: P@55w0rd
+    password: P@55W0rd
     driver-class-name: com.mysql.cj.jdbc.Driver
     test-while-idle: true
     time-between-eviction-runs-millis: 3600000
@@ -45,7 +45,7 @@ entity:
   datasource:
     url: jdbc:mysql://localhost:3306/${spring.application.name}?autoReconnect=true&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
-    password: P@55w0rd
+    password: P@55W0rd
     driver-class-name: com.mysql.cj.jdbc.Driver
     max-wait: 1000
     min-evictable-idle-timeMillis: 300000

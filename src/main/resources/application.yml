@@ -2,7 +2,7 @@
 #trace: on
 spring:
   application:
-    name: dragoncargo
+    name: youjiabackend
   profiles:
     active: dev
 hibernate:
@@ -13,6 +13,7 @@ hibernate:
     - com.dragoncargo.customer.model
     - com.dragoncargo.sales.model
     - com.hwcargo.model
+    - com.youjia.model
   repositoriesToScan: 
     - com.polarj.model.repository
     - com.dragoncargo.omm.model.repository
@@ -20,6 +21,7 @@ hibernate:
     - com.dragoncargo.customer.model.repository
     - com.dragoncargo.sales.model.repository
     - com.hwcargo.model.repository
+    - com.youjia.model.repository
 server:
   servlet:
     context-path: /${spring.application.name}
