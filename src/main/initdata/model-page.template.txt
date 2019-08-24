@@ -1,0 +1,14 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  template: '<app-{lowercaseModelName}-model [showList]="true"></app-{lowercaseModelName}-model>',
+  styleUrls: []
+})
+export class {modelName}Component implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

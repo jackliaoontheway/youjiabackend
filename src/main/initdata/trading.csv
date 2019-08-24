@@ -1,0 +1,4 @@
+#code, name, tradingCorpConfigClassName, tradingAccountConfigClassName, tradingAPIAdapterImplClassName
+amazonus, Amazon US, com.ecomerp.trading.api.amazon.AmazonConfiguration, com.ecomerp.trading.api.amazon.AmazonAccountConfiguration, com.ecomerp.trading.adapter.impl.AmazonAPIImpl
+ebay, eBay, com.ecomerp.trading.api.ebay.EbayConfiguration, com.ecomerp.trading.api.ebay.EbayAccountConfiguration, com.ecomerp.trading.adapter.impl.EbayAPIImpl
+#newegg, New Egg, com.ecomerp.trading.api.newegg.NeweggConfiguration, com.ecomerp.trading.api.newegg.NeweggAccountConfiguration, com.ecomerp.trading.adapter.impl.NeweggAPIImpl

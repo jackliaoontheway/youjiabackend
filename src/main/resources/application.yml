@@ -1,0 +1,29 @@
+#debug: on
+#trace: on
+spring:
+  application:
+    name: dragoncargo
+  profiles:
+    active: dev
+hibernate:
+  packagesToScan: 
+    - com.polarj.model
+    - com.dragoncargo.omm.model
+    - com.dragoncargo.general.model
+    - com.dragoncargo.customer.model
+    - com.dragoncargo.sales.model
+    - com.hwcargo.model
+  repositoriesToScan: 
+    - com.polarj.model.repository
+    - com.dragoncargo.omm.model.repository
+    - com.dragoncargo.general.model.repository
+    - com.dragoncargo.customer.model.repository
+    - com.dragoncargo.sales.model.repository
+    - com.hwcargo.model.repository
+server:
+  servlet:
+    context-path: /${spring.application.name}
+workflow:
+  enable: false
+scheduler:
+  enable: true

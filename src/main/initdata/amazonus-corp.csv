@@ -1,0 +1,2 @@
+#accessKeyId, secretKey, applicationName, applicationVersion, mwsEndpoint, orderSuffix, productSuffix, fbaInboundSuffix, fbaInventorySuffix
+AKIAJQRAASWDO2JZ6T3A, FV/aRg3qWrZP6zAWwU//n9d02UYgT1f2Gu1D6yZ0, OmniSelling Platform, 0.5, https://mws.amazonservices.com, /Orders/2013-09-01

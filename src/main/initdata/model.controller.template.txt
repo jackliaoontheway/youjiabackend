@@ -1,0 +1,19 @@
+package {modelPackageName}.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import {modelPackageName}.{modelName};
+import {modelPackageName}.service.{modelName}Service;
+import com.polarj.common.web.controller.ModelController;
+
+@RestController
+@RequestMapping("/{lowercaseModelName}s")
+public class {modelName}Controller
+        extends ModelController<{modelName}, Integer, {modelName}Service>
+{
+    public {modelName}Controller()
+    {
+        super({modelName}.class);
+    }
+}

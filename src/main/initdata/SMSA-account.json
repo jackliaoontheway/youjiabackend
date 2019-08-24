@@ -1,0 +1,12 @@
+{
+    "code": "TestSmsaAccount",
+    "name":"SMSA Account For Testing",
+    "description": "用于测试的FSMSA帐号",
+    "shared": true,
+    "expressCorp": {"code":"SMSA"},
+    "owner":{"loginName":"w01@test.com"},
+    "billingAddress":null,
+    "languageOnLabel":"en-us",
+    "enabledServiceTypes":[{"serviceTypeCode":"SMSA-DLV"}],
+    "passkey":"Testing0"
+}

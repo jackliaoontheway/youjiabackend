@@ -1,0 +1,18 @@
+[
+{
+    "serviceTypeCode": "USPS-US-FC",
+    "serviceCode":"US-FC",
+    "description":"美国邮政一类邮件 USPS First-Class Mail",
+    "maxDuration":8,
+    "minDuration":3,
+    "basisService": true
+},
+{
+    "serviceTypeCode": "USPS-US-PM",
+    "serviceCode":"US-PM",
+    "description":"美国邮政优先邮件 USPS Priority Mail",
+    "maxDuration":8,
+    "minDuration":3,
+    "basisService": true
+}
+]

@@ -1,0 +1,4 @@
+#moduleCode, description, snPattern, currentSn, inCacheSnAmount
+order, 给系统的普通订单提供业务号，模式是ORD{日期}{日期内的7位流水号}一共18位, ORD${DATE}0000000, 0, 100
+deliveryorder, 系统发货单业务号，模式是DOD{日期}{日期内的7位流水号}一共18位, 10000000000, 0, 100
+tx, 给系统的交易流水提供序列号，模式是TX{日期}{日期内的7位流水号}一共17位, TX${DATE}0000000, 0, 100

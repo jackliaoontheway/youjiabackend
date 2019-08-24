@@ -1,0 +1,9 @@
+package {modelPackageName}.service;
+
+import com.polarj.model.service.EntityService;
+
+import {modelPackageName}.{modelName};
+
+public interface {modelName}Service extends EntityService<{modelName}, Integer>
+{
+}

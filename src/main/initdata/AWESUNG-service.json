@@ -1,0 +1,18 @@
+[
+{
+    "serviceTypeCode": "AWESUNG-1",
+    "serviceCode":"1",
+    "description":"AWESUNG本地包裹",
+    "maxDuration":8,
+    "minDuration":3,
+    "basisService": true
+},
+{
+    "serviceTypeCode": "AWESUNG-2",
+    "serviceCode":"2",
+    "description":"AWESUNG OSM",
+    "maxDuration":8,
+    "minDuration":3,
+    "basisService": true
+}
+]

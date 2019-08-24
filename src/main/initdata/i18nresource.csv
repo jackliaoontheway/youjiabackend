@@ -1,0 +1,5 @@
+# key, languageId, value
+com.polarj.model.enumeration.SupportedLanguage.zh-cn, zh-cn, 中文
+com.polarj.model.enumeration.SupportedLanguage.zh-cn, en-us, 中文
+com.polarj.model.enumeration.SupportedLanguage.en-us, zh-cn, English
+com.polarj.model.enumeration.SupportedLanguage.en-us, en-us, English

@@ -1,0 +1,11 @@
+hibernate:
+  show-sql: false
+  ddl-auto: validate
+logging:
+  file: ${spring.application.name}-${spring.profiles.active}.log
+  path:   # ==>> file: log/spring.log
+cors:
+  allowedOrigins: 
+    - "*"
+polarj:
+  frontendBaseURL: "http://localhost:4200/"

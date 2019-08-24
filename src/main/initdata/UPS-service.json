@@ -1,0 +1,18 @@
+[
+{
+    "serviceTypeCode": "UPS-03",
+    "serviceCode":"03",
+    "description":"美国UPS本地包裹",
+    "maxDuration":8,
+    "minDuration":3,
+    "basisService": true
+},
+{
+    "serviceTypeCode": "UPS-59",
+    "serviceCode":"59",
+    "description":"美国UPS第二天一早投递的包裹",
+    "maxDuration":2,
+    "minDuration":1,
+    "basisService": true
+}
+]

@@ -1,0 +1,3 @@
+#loagin name, password, status, group code
+admin@test.com, asdasd123, ACTIVE, admin
+s01@test.com, asdasd123, ACTIVE, normal

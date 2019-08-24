@@ -1,0 +1,77 @@
+spring:
+  main:
+    banner-mode: "off" ### default is "CONSOLE"
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+app:
+  name: ${spring.application.name}
+logging:
+  config: classpath:log4j2-spring-${spring.profiles.active}.xml
+hibernate:
+  generate-ddl: true
+  dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+cors:
+  allowedMethods: [GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, PATCH]
+  allowedHeaders: [Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers]
+  exposedHeaders: [Access-Control-Allow-Origin,Access-Control-Allow-Credentials]
+  supportCredentials: true
+  preflightMaxage: 10
+shiro:
+  unauthorizedUrl: /unauthorized
+  anonUrls:
+    - "/actuator/**"
+    - "/unauthorized"
+    - "/languages"
+    - "/loginaudit/login"
+    - "/useraccounts/register"
+    - "/useraccounts/confirm"
+    - "/useraccounts/reset-password-request"
+    - "/useraccounts/reset-password"
+workflow:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dbcoppercore?autoReconnect=true&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: P@55w0rd
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    test-while-idle: true
+    time-between-eviction-runs-millis: 3600000
+    validation-query: SELECT 1 FROM DUAL
+    validation-interval: 3600000 # 1小时
+    hikari:
+      maximumPoolSize:20     ### default is 10
+entity:
+  datasource:
+    url: jdbc:mysql://localhost:3306/${spring.application.name}?autoReconnect=true&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: P@55w0rd
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    max-wait: 1000
+    min-evictable-idle-timeMillis: 300000
+    test-while-idle: true
+    validation-query: SELECT 1 FROM DUAL
+    validation-interval: 3600000 # 1小时
+    time-between-eviction-runs-millis: 60000
+    remove-abandoned: true
+    remove-abandoned-timeout: 1800000
+    hikari:
+      maximum-pool-size: 20     ### default is 10
+polarj:
+  temporaryFilePath: "/var/tmp/temporary/"
+  permanentFilePath: "/var/tmp/permanent/"
+  frontendBaseURL: "http://localhost:4200/"
+  email:
+    server: smtp.gmail.com
+    port: 587
+    userName: polarj.pm@gmail.com
+    password: P01@rjpm
+    from: polarj.pm@gmail.com
+    ttls: true
+    ssl: false
+info:
+  name: ${spring.application.name}
+  profiles: ${spring.profiles.active}
+  has_workflow: ${workflow.enable}
+saoms:
+  font: "msyh.ttf" # 中文字体，用于PdfConfiguration

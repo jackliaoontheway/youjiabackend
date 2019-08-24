@@ -1,0 +1,8 @@
+{
+  "owner": {"loginName": "s01@test.com"},
+  "code": "ebay-v4ink",
+  "name": "V4INK on ebay",
+  "tradingCorp":{"code":"ebay"},
+  "tradingAccountConfigClassName":"com.ecomerp.trading.api.ebay.EbayAccountConfiguration",
+  "token": "AgAAAA**AQAAAA**aAAAAA**MP6vWQ**nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6AFk4ulC5aKoQidj6x9nY+seQ**5UoCAA**AAMAAA**e72IHlrSJkXOEDXRnevtjN5qCpTY4ALGIxQFoW6KjvZnpw4kzk4QpxEmIu0qKorMmySMuua91gpkzd50PQOan5zA7HKkN/A8Hv7Ve+sJJW0qKK8n+08xrp90iUE1kMeaPKMipYEN1p/4MqIJ9Ew7Juy9LR1CtaphptHjwU+H0Q1N4snn3FdRf3PWZFJoAU3kSwusjmRZF54mh9io51bqACHMLYjZE6h7uDMgKnzFMZSRc5SlS0HOg8sR9ZifweHI6CxsLqnH4t7SoJvsfVPXRBkr1DG4PfGqQHdoo1Uczx2VfI9B/oN/Vz81cHBs4h8xGzPj1GIHuf3f42JxH9hCBsfbSmS/gC8Fs59Tyfn5cF4dFgvtLMfx/KPVZ2Bkkhzscqme+nyldSa/7OAwkaRmwOmYh9uUYz1yEa4jBa4BMPhWntImjodlyPaXZgqhpVmsCZgaja1lFd7iqkM6Q0mTQF7HuVKH8+rVjcDZDWGQ55SzdLemTjT0UgLy9Hi8gT1gGKJUe571ZNGqSni6nXP1upPaXZ/lbuXEhHJuKOYSM4VzddRzFU4Vl2nFW0W/o1Ig8FSDO9entPKQ631vrchPRFFp6zjf6iUNcuTtBdGhbxzb7rANX3bDoD9iK7rHNv9jMqUKDQEXMVa8GNZgnxmfR2c3yWU1kOUyIT3bbo254iU98xh2gdZEF4V4DRbMe1ctsQoBeo7rurSAZnUUty1y+5pgAUZ7H5AsXpr4UH7OAFaCiTEnnYUhlGQ2PakuCv+b"
+}

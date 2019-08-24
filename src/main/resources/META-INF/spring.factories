@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.polarj.PolarjAppConfig,com.polarj.PolarjCorsConfig,com.polarj.PolarjShiroConfig,com.polarj.PolarjJpaConfig,com.polarj.WorkflowJpaConfig

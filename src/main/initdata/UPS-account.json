@@ -1,0 +1,18 @@
+{
+	"code": "TestUPSAccount",
+    "name":"UPS Account For Testing",
+    "description": "用于测试的UPS帐号",
+    "shared": true,
+    "expressCorp": {"code":"UPS"},
+    "owner":{"loginName":"w01@test.com"},
+    "billingAddress":null,
+    "languageOnLabel":"en-us",
+    "enabledServiceTypes":[{"serviceTypeCode":"UPS-03"},{"serviceTypeCode":"UPS-59"}],
+    "userName":"omnisellingla",
+    "password":"0mni5e11in9l@",
+    "accessLicenseNumber":"6CF031BE17D79625",
+    "accountNumber":"14963R",
+    "mailerId":"999935346",
+    "responsibleAccountNumber":null,
+    "responsibleName":null
+}

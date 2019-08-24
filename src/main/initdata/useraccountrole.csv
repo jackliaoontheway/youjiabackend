@@ -1,0 +1,6 @@
+# role code, role name, view language, work language, page size, fir page url, is default role
+admin, 系统管理员, zh-cn, en-us, 10, deliveryorder, false
+seller, 卖家用户, zh-cn, en-us, 10, deliveryorder, true
+warehouse, 仓库用户, zh-cn, en-us, 10, deliveryorder, false
+courier, 物流代理商, zh-cn, en-us, 10, dashboard, false
+customs, 海关服务商, zh-cn, en-us, 10, dashboard, false

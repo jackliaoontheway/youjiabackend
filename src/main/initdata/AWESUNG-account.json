@@ -1,0 +1,12 @@
+{
+    "code": "TestAwesungAccount",
+    "name":"Awesung Account For Testing",
+    "description": "用于测试的Awesung帐号",
+    "shared": true,
+    "expressCorp": {"code":"AWESUNG"},
+    "owner":{"loginName":"w01@test.com"},
+    "billingAddress":null,
+    "languageOnLabel":"en-us",
+    "mid":"3008",
+    "enabledServiceTypes":[{"serviceTypeCode":"AWESUNG-1"}]
+}

@@ -1,0 +1,10 @@
+{
+  "owner": {"loginName": "s02@test.com"},
+  "code": "amazonus-gt",
+  "name": "Global Toner",
+  "sellerId":"A23O97UH20LR4O",
+  "marketplaceId":"ATVPDKIKX0DER",
+  "mwsAuthToken":"amzn.mws.aca47226-5f68-4d3b-5b1e-9862c58c0fe9",
+  "tradingAccountConfigClassName":"com.ecomerp.trading.api.amazon.AmazonAccountConfiguration",
+  "tradingCorp":{"code":"amazonus"}
+}

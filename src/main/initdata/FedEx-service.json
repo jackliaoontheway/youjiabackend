@@ -1,0 +1,18 @@
+[
+{
+    "serviceTypeCode": "FedEx-FEDEX_GROUND",
+    "serviceCode":"FEDEX_GROUND",
+    "description":"美国FedEx本地包裹",
+    "maxDuration":8,
+    "minDuration":3,
+    "basisService": true
+},
+{
+    "serviceTypeCode": "FedEx-GROUND_HOME_DELIVERY",
+    "serviceCode":"GROUND_HOME_DELIVERY",
+    "description":"美国FedEx住宅投递",
+    "maxDuration":8,
+    "minDuration":3,
+    "basisService": true
+}
+]

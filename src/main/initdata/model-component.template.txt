@@ -1,0 +1,27 @@
+import { Component, Input, OnInit } from '@angular/core';
+import { {modelName}Model } from '../{lowercaseModelName}.model';
+import { ModelComponent } from '../generic-model/model.component';
+
+@Component({
+  selector: 'app-{lowercaseModelName}-model',
+  templateUrl: '../generic-model/model.component.html',
+  styleUrls: []
+})
+export class {modelName}ModelComponent extends ModelComponent<{modelName}Model> implements OnInit {
+  private url: string = '/{lowercaseModelName}s/';
+  generateModel(entity?: {modelName}Model): {modelName}Model {
+    if( entity == null ) {
+      let e = new {modelName}Model();
+      // TODO: should create all fields with model type;
+      return e;
+    } else {
+      // TODO: should create all fields which is null and with model type;
+    }
+  }
+
+  ngOnInit() {
+    this.setServiceUrl(this.url);
+    super.ngOnInit();
+  }
+
+}

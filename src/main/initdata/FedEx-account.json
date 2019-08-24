@@ -1,0 +1,16 @@
+{
+	"code": "TestFedExAccount",
+    "name":"FedEx Account For Testing",
+    "description": "用于测试的FedEx帐号",
+    "shared": true,
+    "expressCorp": {"code":"FedEx"},
+    "owner":{"loginName":"w01@test.com"},
+    "billingAddress":null,
+    "languageOnLabel":"en-us",
+    "enabledServiceTypes":[{"serviceTypeCode":"FedEx-FEDEX_GROUND"},{"serviceTypeCode":"FedEx-GROUND_HOME_DELIVERY"}],
+    "key":"Pf5s8RpimlEAhhK1",
+    "password":"femQTQV4cYn8nT1AgepFcbFQt",
+    "accountNumber":"510087500",
+    "meterNumber":"118990047",
+    "country":"US"
+}

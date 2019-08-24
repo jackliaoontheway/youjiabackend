@@ -1,0 +1,10 @@
+[
+{
+    "serviceTypeCode": "SMSA-DLV",
+    "serviceCode":"DLV",
+    "description":"SMSA本地包裹",
+    "maxDuration":8,
+    "minDuration":3,
+    "basisService": true
+}
+]

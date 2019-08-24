@@ -1,0 +1,14 @@
+{
+    "code": "TestUSPSAccount",
+    "name":"USPS Account For Testing",
+    "description": "用于测试的USPS帐号",
+    "shared": true,
+    "expressCorp": {"code":"USPS"},
+    "owner":{"loginName":"w02@test.com"},
+    "billingAddress":null,
+    "languageOnLabel":"en-us",
+    "enabledServiceTypes":[{"serviceTypeCode":"USPS-US-FC"},{"serviceTypeCode":"USPS-US-PM"}],
+    "userName":"OmniAPIUSLA",
+    "password":"0mni5e11in9",
+    "integrationID":"93eecbea-2e3b-4feb-9de4-acc10fb34bc4"
+}
