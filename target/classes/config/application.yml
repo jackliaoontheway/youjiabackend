@@ -21,6 +21,7 @@ cors:
 shiro:
   unauthorizedUrl: /unauthorized
   anonUrls:
+    - "/api/**"
     - "/actuator/**"
     - "/unauthorized"
     - "/languages"

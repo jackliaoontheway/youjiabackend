@@ -6,4 +6,6 @@ import com.youjia.model.Renter;
 
 public interface RenterService extends EntityService<Renter, Integer>
 {
+
+	Renter findByLoginName(String loginName);
 }

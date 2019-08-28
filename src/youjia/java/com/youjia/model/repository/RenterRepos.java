@@ -5,4 +5,5 @@ import com.youjia.model.Renter;
 
 public interface RenterRepos extends JpaRepository<Renter, Integer>
 {
+	Renter findFirstByPhone(String loginName);
 }

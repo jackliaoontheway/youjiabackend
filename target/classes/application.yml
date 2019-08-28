@@ -5,6 +5,11 @@ spring:
     name: youjiabackend
   profiles:
     active: dev
+  servlet:
+    multipart:
+      max-file-size: 100MB # 单个文件大小
+      max-request-size: 100MB # 设置总上传的数据大小
+      enabled: true #开启
 hibernate:
   packagesToScan: 
     - com.polarj.model

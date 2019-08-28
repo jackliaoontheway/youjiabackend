@@ -44,6 +44,6 @@ public @ToString @EqualsAndHashCode(callSuper = false) class Building extends Ge
 	private @Setter @Getter String description;
 
 	@OneToMany(mappedBy = "building")
-	private List<Room> roomList;
+	private @Setter @Getter List<Room> roomList;
 
 }
