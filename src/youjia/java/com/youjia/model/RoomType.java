@@ -1,7 +1,13 @@
 package com.youjia.model;
 
-public enum RoomType {
+import com.polarj.model.enumeration.I18nResourceKey;
 
+public enum RoomType implements I18nResourceKey {
+
+	/**
+	 * 单间
+	 */
+	ONE_ROOM,
 	/**
 	 * 一室一厅
 	 */
@@ -15,7 +21,16 @@ public enum RoomType {
 	/**
 	 * 三室一厅
 	 */
-	THREE_ROOM_ONE_HALL;
+	THREE_ROOM_ONE_HALL,
+	
+	/**
+	 * 三室二厅
+	 */
+	THREE_ROOM_TWO_HALL;
 
+	@Override
+	public String getI18nResourceKey() {
+		return name();
+	}
 
 }

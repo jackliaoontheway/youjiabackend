@@ -9,6 +9,7 @@ import javax.persistence.Table;
 
 import com.polarj.model.GenericDbInfo;
 import com.polarj.model.annotation.FieldMetaData;
+import com.polarj.model.annotation.I18nField;
 import com.polarj.model.annotation.ModelMetaData;
 import com.polarj.model.enumeration.FieldMetaDataSupportedDataType;
 
@@ -27,10 +28,10 @@ public @ToString @EqualsAndHashCode(callSuper = false) class Room extends Generi
 	*/
 	private static final long serialVersionUID = 4339686661945374242L;
 
-	@FieldMetaData(position = 0, label = "房屋", dataType = FieldMetaDataSupportedDataType.OBJECT, labelField = "buildingNo", required = true, enumClass = Building.class)
+	@FieldMetaData(position = 0, label = "房屋", dataType = FieldMetaDataSupportedDataType.OBJECT, managementSeparately = true, labelField = "label", required = true, enumClass = Building.class)
 	@ManyToOne
 	@JoinColumn(name = "buildingId", foreignKey = @ForeignKey(name = "fk_room_building_buildingId"), referencedColumnName = "id")
-	private @Getter @Setter Building building;
+	private @Setter @Getter Building building;
 
 	@FieldMetaData(position = 10, label = "房间编号")
 	@Column(name = "roomNo", nullable = false)
@@ -63,5 +64,7 @@ public @ToString @EqualsAndHashCode(callSuper = false) class Room extends Generi
 	@FieldMetaData(position = 70, label = "默认房租", dataType = FieldMetaDataSupportedDataType.NUMBER)
 	@Column(name = "defaultRent")
 	private @Setter @Getter Integer defaultRent;
+
+	private @Setter @Getter String label;
 
 }

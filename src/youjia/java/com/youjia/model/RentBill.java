@@ -12,6 +12,7 @@ import javax.persistence.Table;
 
 import com.polarj.model.GenericDbInfo;
 import com.polarj.model.annotation.FieldMetaData;
+import com.polarj.model.annotation.I18nField;
 import com.polarj.model.annotation.ModelMetaData;
 import com.polarj.model.enumeration.FieldMetaDataSupportedDataType;
 
@@ -34,7 +35,7 @@ public @ToString @EqualsAndHashCode(callSuper = false) class RentBill extends Ge
 	@JoinColumn(name = "renterId", foreignKey = @ForeignKey(name = "fk_rentbill_renter_renterId"), referencedColumnName = "id")
 	private @Getter @Setter Renter renter;
 
-	@FieldMetaData(position = 5, label = "房间", dataType = FieldMetaDataSupportedDataType.OBJECT, required = true, enumClass = Room.class, labelField = "roomNo")
+	@FieldMetaData(position = 5, label = "房间", dataType = FieldMetaDataSupportedDataType.OBJECT, required = true, enumClass = Room.class, labelField = "label")
 	@OneToOne
 	@JoinColumn(name = "roomId", foreignKey = @ForeignKey(name = "fk_rentbill_room_roomId"))
 	private @Getter @Setter Room room;
@@ -48,27 +49,27 @@ public @ToString @EqualsAndHashCode(callSuper = false) class RentBill extends Ge
 	private @Setter @Getter String payStatus;
 
 	@FieldMetaData(position = 20, label = "上月冷水(吨)", dataType = FieldMetaDataSupportedDataType.NUMBER)
-	@Column(name = "coldWaterTon")
+	@Column(name = "lastMonthColdWaterTon")
 	private @Setter @Getter Double lastMonthColdWaterTon;
 
 	@FieldMetaData(position = 30, label = "上月热水(吨)", dataType = FieldMetaDataSupportedDataType.NUMBER)
-	@Column(name = "hotWaterTon")
+	@Column(name = "lastMonthHotWaterTon")
 	private @Setter @Getter Double lastMonthHotWaterTon;
 
 	@FieldMetaData(position = 40, label = "上月电(度)", dataType = FieldMetaDataSupportedDataType.NUMBER)
-	@Column(name = "electricQuantity")
+	@Column(name = "lastMonthElectricQuantity")
 	private @Setter @Getter Double lastMonthElectricQuantity;
 
 	@FieldMetaData(position = 50, label = "本月冷水(吨)", dataType = FieldMetaDataSupportedDataType.NUMBER)
-	@Column(name = "coldWaterTon")
+	@Column(name = "currentMonthColdWaterTon")
 	private @Setter @Getter Double currentMonthColdWaterTon;
 
 	@FieldMetaData(position = 60, label = "本月热水(吨)", dataType = FieldMetaDataSupportedDataType.NUMBER)
-	@Column(name = "hotWaterTon")
+	@Column(name = "currentMonthHotWaterTon")
 	private @Setter @Getter Double currentMonthHotWaterTon;
 
 	@FieldMetaData(position = 70, label = "本月电(度)", dataType = FieldMetaDataSupportedDataType.NUMBER)
-	@Column(name = "electricQuantity")
+	@Column(name = "currentMonthElectricQuantity")
 	private @Setter @Getter Double currentMonthElectricQuantity;
 
 	@FieldMetaData(position = 80, label = "租金", dataType = FieldMetaDataSupportedDataType.NUMBER)

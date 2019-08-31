@@ -1,25 +1,32 @@
 package com.youjia.model;
 
-public enum RoomStatus {
-	
+import com.polarj.model.enumeration.I18nResourceKey;
+
+public enum RoomStatus implements I18nResourceKey {
+
 	/**
 	 * 未租
 	 */
 	AVAILABEL,
-	
+
 	/**
 	 * 预定
 	 */
 	RESERVED,
-	
+
 	/**
-	 * 已组
+	 * 已租
 	 */
 	RENTED,
-	
+
 	/**
 	 * 正在退租
 	 */
-	WITHDRAW,
+	WITHDRAW;
+
+	@Override
+	public String getI18nResourceKey() {
+		return name();
+	}
 
 }

@@ -1,6 +1,8 @@
 package com.youjia.model;
 
-public enum LeaseStatus {
+import com.polarj.model.enumeration.I18nResourceKey;
+
+public enum LeaseStatus implements I18nResourceKey {
 
 	/**
 	 * 生效
@@ -20,6 +22,11 @@ public enum LeaseStatus {
 	/**
 	 * 到期
 	 */
-	EXPIRED,
+	EXPIRED,;
+
+	@Override
+	public String getI18nResourceKey() {
+		return name();
+	}
 
 }

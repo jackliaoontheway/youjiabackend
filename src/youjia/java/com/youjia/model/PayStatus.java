@@ -1,6 +1,8 @@
 package com.youjia.model;
 
-public enum PayStatus {
+import com.polarj.model.enumeration.I18nResourceKey;
+
+public enum PayStatus implements I18nResourceKey {
 
 	/**
 	 * 未交租
@@ -10,6 +12,11 @@ public enum PayStatus {
 	/**
 	 * 已交租
 	 */
-	PAYED,
+	PAYED;
+	
+	@Override
+	public String getI18nResourceKey() {
+		return name();
+	}
 
 }

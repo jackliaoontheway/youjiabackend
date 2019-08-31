@@ -6,6 +6,5 @@ import com.youjia.model.Renter;
 
 public interface RentBillRepos extends JpaRepository<RentBill, Integer>
 {
-
-	RentBill findFirstByRenter(Renter renter);
+	RentBill findFirstByRenterOrderByIdDesc(Renter renter);
 }

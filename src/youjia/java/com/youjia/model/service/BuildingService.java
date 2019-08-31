@@ -6,4 +6,5 @@ import com.youjia.model.Building;
 
 public interface BuildingService extends EntityService<Building, Integer>
 {
+	
 }

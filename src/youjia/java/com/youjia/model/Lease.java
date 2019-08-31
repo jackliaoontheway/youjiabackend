@@ -12,6 +12,7 @@ import javax.persistence.Table;
 
 import com.polarj.model.GenericDbInfo;
 import com.polarj.model.annotation.FieldMetaData;
+import com.polarj.model.annotation.I18nField;
 import com.polarj.model.annotation.ModelMetaData;
 import com.polarj.model.enumeration.FieldMetaDataSupportedDataType;
 
@@ -30,16 +31,17 @@ public @ToString @EqualsAndHashCode(callSuper = false) class Lease extends Gener
 	*/
 	private static final long serialVersionUID = 4339686661945374242L;
 
-	@FieldMetaData(position = 0, label = "租户", dataType = FieldMetaDataSupportedDataType.OBJECT, labelField = "name", required = true, enumClass = Renter.class)
+	@FieldMetaData(position = 0, label = "租户", dataType = FieldMetaDataSupportedDataType.OBJECT, managementSeparately = true, labelField = "name", required = true, enumClass = Renter.class)
 	@ManyToOne
 	@JoinColumn(name = "renterId", foreignKey = @ForeignKey(name = "fk_lease_renter_renterId"), referencedColumnName = "id")
 	private @Getter @Setter Renter renter;
 
-	@FieldMetaData(position = 5, label = "房间", dataType = FieldMetaDataSupportedDataType.OBJECT, required = true, enumClass = Room.class, labelField = "roomNo")
+	@FieldMetaData(position = 5, label = "房间", dataType = FieldMetaDataSupportedDataType.OBJECT, managementSeparately = true, labelField = "label", required = true, enumClass = Room.class)
 	@OneToOne
 	@JoinColumn(name = "roomId", foreignKey = @ForeignKey(name = "fk_lease_room_roomId"))
 	private @Getter @Setter Room room;
 
+	@I18nField
 	@FieldMetaData(position = 8, label = "状态", required = true, enumClass = LeaseStatus.class)
 	@Column(name = "leaseStatus")
 	private @Setter @Getter String leaseStatus;

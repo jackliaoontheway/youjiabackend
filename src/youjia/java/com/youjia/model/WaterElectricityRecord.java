@@ -29,7 +29,7 @@ public @ToString @EqualsAndHashCode(callSuper = false) class WaterElectricityRec
 	*/
 	private static final long serialVersionUID = 4339686661945374242L;
 
-	@FieldMetaData(position = 0, label = "房间", dataType = FieldMetaDataSupportedDataType.OBJECT, required = true, enumClass = Room.class, labelField = "value")
+	@FieldMetaData(position = 0, label = "房间", dataType = FieldMetaDataSupportedDataType.OBJECT, managementSeparately = true, required = true, enumClass = Room.class, labelField = "label")
 	@ManyToOne
 	@JoinColumn(name = "roomId", foreignKey = @ForeignKey(name = "fk_waterelectricityrecord_room_roomId"), referencedColumnName = "id")
 	private @Getter @Setter Room room;

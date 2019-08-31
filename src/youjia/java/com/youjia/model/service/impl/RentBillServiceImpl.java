@@ -14,6 +14,6 @@ public class RentBillServiceImpl extends EntityServiceImpl<RentBill, Integer> im
 	@Override
 	public RentBill findByRenter(Renter renter) {
 		RentBillRepos repos = (RentBillRepos) this.getRepos();
-		return repos.findFirstByRenter(renter);
+		return repos.findFirstByRenterOrderByIdDesc(renter);
 	}
 }

@@ -30,10 +30,10 @@ public @ToString @EqualsAndHashCode(callSuper = false) class Building extends Ge
 	*/
 	private static final long serialVersionUID = 4339686661945374242L;
 
-	@FieldMetaData(position = 0, label = "社区", dataType = FieldMetaDataSupportedDataType.OBJECT, required = true, labelField = "name", enumClass = Community.class)
+	@FieldMetaData(position = 0, label = "社区", dataType = FieldMetaDataSupportedDataType.OBJECT, managementSeparately = true, required = true, labelField = "name", enumClass = Community.class)
 	@ManyToOne
 	@JoinColumn(name = "communityId", foreignKey = @ForeignKey(name = "fk_building_community_communityId"), referencedColumnName = "id")
-	private @Getter @Setter Community community;
+	private @Setter @Getter Community community;
 
 	@FieldMetaData(position = 10, label = "房屋编号(栋)")
 	@Column(name = "name", nullable = false)
@@ -46,4 +46,5 @@ public @ToString @EqualsAndHashCode(callSuper = false) class Building extends Ge
 	@OneToMany(mappedBy = "building")
 	private @Setter @Getter List<Room> roomList;
 
+	private @Setter @Getter String label;
 }
