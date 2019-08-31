@@ -27,7 +27,7 @@ public class GenerateModelRelatedBackendCode
 
     private String modelPackage = "com.youjia.model";
 
-    private String modelName = "WaterElectricityRecord";
+    private String modelName = "RentBill";
     // *********************************************************************
 
     public static void main(String[] args)

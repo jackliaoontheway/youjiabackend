@@ -22,8 +22,8 @@ import com.youjia.model.RentBill;
 import com.youjia.model.Renter;
 import com.youjia.model.service.BuildingService;
 import com.youjia.model.service.LeaseService;
+import com.youjia.model.service.RentBillService;
 import com.youjia.model.service.RenterService;
-import com.youjia.model.service.RoomService;
 
 @RestController
 @RequestMapping("/api")
@@ -34,12 +34,12 @@ public class ApiController {
 
 	@Autowired
 	private LeaseService leaseService;
+	
+	@Autowired
+	private RentBillService rentBillService;
 
 	@Autowired
 	private BuildingService buildingService;
-
-	@Autowired
-	private RoomService roomService;
 
 	@PostMapping("/login")
 	public @ResponseBody boolean login(HttpServletRequest request, String loginName, String password,
@@ -91,15 +91,15 @@ public class ApiController {
 	 * @param response
 	 * @return
 	 */
-	@PostMapping("/fetchRent")
+	@PostMapping("/fetchRentBill")
 	public @ResponseBody RentBill fetchRent(HttpServletRequest request, String loginName,
 			HttpServletResponse response) {
 
-		if (loginName == null) {
+		Renter renter = renterService.findByLoginName(loginName);
+		if (renter == null) {
 			return null;
 		}
-
-		return null;
+		return rentBillService.findByRenter(renter);
 	}
 
 	/**
@@ -109,8 +109,7 @@ public class ApiController {
 	 */
 	@PostMapping("/fetchBuilding")
 	public @ResponseBody List<Building> fetchBuilding(HttpServletRequest request, HttpServletResponse response) {
-		List<Building> list = buildingService.list(CommonConstant.defaultSystemLanguage);
-		return list;
+		return buildingService.list(CommonConstant.defaultSystemLanguage);
 	}
 
 	/**
@@ -121,14 +120,13 @@ public class ApiController {
 	 * @param response
 	 * @return
 	 */
-	@PostMapping("/fetchRoom")
-	public @ResponseBody Lease fetchRoom(HttpServletRequest request, String loginName, HttpServletResponse response) {
-
-		if (loginName == null) {
+	@PostMapping("/fetchLease")
+	public @ResponseBody Lease fetchLease(HttpServletRequest request, String loginName, HttpServletResponse response) {
+		Renter renter = renterService.findByLoginName(loginName);
+		if (renter == null) {
 			return null;
 		}
-
-		return null;
+		return leaseService.findByRenter(renter);
 	}
 
 	/**
@@ -138,20 +136,13 @@ public class ApiController {
 	 * @param response
 	 * @return
 	 */
-	@PostMapping("/chekoutRoom")
-	public @ResponseBody boolean chekoutRoom(HttpServletRequest request, String loginName,
+	@PostMapping("/withdrawLease")
+	public @ResponseBody boolean withdrawLease(HttpServletRequest request, String loginName,
 			HttpServletResponse response) {
-
-		if (loginName == null) {
-			return false;
-		}
-
 		Renter renter = renterService.findByLoginName(loginName);
 		if (renter == null) {
 			return false;
 		}
-		// 把租户的状态改为 WITHDRAW
-		// return checkOutService.addCheckOut(loginName);
-		return true;
+		return leaseService.withdraw(renter);
 	}
 }

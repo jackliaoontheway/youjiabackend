@@ -40,6 +40,10 @@ public @ToString @EqualsAndHashCode(callSuper = false) class Lease extends Gener
 	@JoinColumn(name = "roomId", foreignKey = @ForeignKey(name = "fk_lease_room_roomId"))
 	private @Getter @Setter Room room;
 
+	@FieldMetaData(position = 8, label = "状态", required = true, enumClass = LeaseStatus.class)
+	@Column(name = "leaseStatus")
+	private @Setter @Getter String leaseStatus;
+
 	@FieldMetaData(position = 10, label = "租约开始时间", dataType = FieldMetaDataSupportedDataType.DATE, formatter = FieldMetaDataSupportedDataType.DATEFORMAT)
 	@Column(length = 32)
 	private @Setter @Getter Date effetiveDate;
@@ -56,9 +60,9 @@ public @ToString @EqualsAndHashCode(callSuper = false) class Lease extends Gener
 	@Column(name = "deposit")
 	private @Setter @Getter Integer deposit;
 
-	@FieldMetaData(position = 50, label = "网费", dataType = FieldMetaDataSupportedDataType.BOOLEAN)
+	@FieldMetaData(position = 50, label = "网费", dataType = FieldMetaDataSupportedDataType.NUMBER)
 	@Column(name = "netFee")
-	private @Setter @Getter boolean netFee;
+	private @Setter @Getter Integer netFee;
 
 	@FieldMetaData(position = 60, label = "管理费", dataType = FieldMetaDataSupportedDataType.NUMBER)
 	@Column(name = "manageFee")
