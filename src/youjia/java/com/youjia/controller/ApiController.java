@@ -1,5 +1,7 @@
 package com.youjia.controller;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
@@ -34,7 +36,7 @@ public class ApiController {
 
 	@Autowired
 	private LeaseService leaseService;
-	
+
 	@Autowired
 	private RentBillService rentBillService;
 
@@ -52,7 +54,7 @@ public class ApiController {
 		if (renter == null) {
 			return false;
 		}
-		
+
 		if (!renter.matchPassword(password)) {
 			return false;
 		}
@@ -70,10 +72,13 @@ public class ApiController {
 		PersonalPhoto photo = new PersonalPhoto();
 		if (files != null && files.length > 0) {
 			MultipartFile file = files[0];
-			photo.setFileName(file.getOriginalFilename());
+			photo.setFileName("D:\\temp\\" + file.getOriginalFilename());
 			photo.setFileType(file.getOriginalFilename().substring(photo.getFileName().indexOf(".")));
 			try {
-				photo.setContent(file.getBytes());
+				File newFile = new File("D:\\temp\\" + file.getOriginalFilename());
+				FileOutputStream out = new FileOutputStream(newFile);
+				out.write(file.getBytes());
+				out.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -137,12 +142,12 @@ public class ApiController {
 	 * @return
 	 */
 	@PostMapping("/withdrawLease")
-	public @ResponseBody boolean withdrawLease(HttpServletRequest request, String loginName,
+	public @ResponseBody boolean withdrawRequest(HttpServletRequest request, String loginName,
 			HttpServletResponse response) {
 		Renter renter = renterService.findByLoginName(loginName);
 		if (renter == null) {
 			return false;
 		}
-		return leaseService.withdraw(renter);
+		return leaseService.withdrawRequest(renter);
 	}
 }
