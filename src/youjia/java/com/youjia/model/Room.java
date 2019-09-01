@@ -9,7 +9,6 @@ import javax.persistence.Table;
 
 import com.polarj.model.GenericDbInfo;
 import com.polarj.model.annotation.FieldMetaData;
-import com.polarj.model.annotation.I18nField;
 import com.polarj.model.annotation.ModelMetaData;
 import com.polarj.model.enumeration.FieldMetaDataSupportedDataType;
 

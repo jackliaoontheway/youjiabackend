@@ -22,7 +22,7 @@ public enum LeaseStatus implements I18nResourceKey {
 	/**
 	 * 到期
 	 */
-	EXPIRED,;
+	EXPIRED;
 
 	@Override
 	public String getI18nResourceKey() {
