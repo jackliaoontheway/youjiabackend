@@ -44,7 +44,7 @@ public final class CommonConstant
 
     final public static String xlsxSuffix = ".xlsx";
 
-    final public static String defaultSystemLanguage = "en-us";
+    final public static String defaultSystemLanguage = "zh-cn";
 
     // 系统使用的货币，所有的其他显示货币使用（前一天/即时）的汇率转换成系统缺省货币进行内部计算
     // 支持的货币由支持的国家来确定，已经持久化到系统中。

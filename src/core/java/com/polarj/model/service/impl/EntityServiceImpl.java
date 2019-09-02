@@ -423,7 +423,7 @@ public class EntityServiceImpl<T extends GenericDbInfo, ID extends Serializable>
         List<T> results = new ArrayList<T>();
         for (T entity : entities)
         {
-            T res = replaceI18nFieldValueWithResource(entity, fields, languageId, Boolean.FALSE);
+            T res = replaceI18nFieldValueWithResource(entity, fields, languageId, true);
             if (res != null)
             {
                 results.add(res);

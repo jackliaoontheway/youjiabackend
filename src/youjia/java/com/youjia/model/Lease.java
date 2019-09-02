@@ -9,6 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import com.polarj.model.GenericDbInfo;
 import com.polarj.model.annotation.FieldMetaData;
@@ -21,7 +22,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@ModelMetaData(label = "租约管理")
+@ModelMetaData(label = "租约管理", tabField = "leaseStatus", tabValues = { "AVAILABEL", "WITHDRAWREQUEST", "WITHDRAWED",
+		"EXPIRED" })
 @Entity
 @Table(name = "lease")
 public @ToString @EqualsAndHashCode(callSuper = false) class Lease extends GenericDbInfo {
@@ -69,5 +71,14 @@ public @ToString @EqualsAndHashCode(callSuper = false) class Lease extends Gener
 	@FieldMetaData(position = 60, label = "管理费", dataType = FieldMetaDataSupportedDataType.NUMBER)
 	@Column(name = "manageFee")
 	private @Setter @Getter Integer manageFee;
+
+	@Transient
+	private @Setter @Getter String buildingNumber;
+	
+	@Transient
+	private @Setter @Getter String effetiveDateString;
+	
+	@Transient
+	private @Setter @Getter String expiredDateString;
 
 }

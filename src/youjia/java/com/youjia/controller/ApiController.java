@@ -3,6 +3,7 @@ package com.youjia.controller;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -114,7 +115,8 @@ public class ApiController {
 	 */
 	@PostMapping("/fetchBuilding")
 	public @ResponseBody List<Building> fetchBuilding(HttpServletRequest request, HttpServletResponse response) {
-		return buildingService.list(CommonConstant.defaultSystemLanguage);
+		List<Building> list = buildingService.list(CommonConstant.defaultSystemLanguage);
+		return list;
 	}
 
 	/**
@@ -131,7 +133,16 @@ public class ApiController {
 		if (renter == null) {
 			return null;
 		}
-		return leaseService.findByRenter(renter);
+		Lease dblease = leaseService.findByRenter(renter);
+		Lease lease = new Lease();
+
+		lease.setBuildingNumber(dblease.getRoom().getLabel());
+		SimpleDateFormat format = new SimpleDateFormat(CommonConstant.DateFormatString);
+		lease.setEffetiveDateString(format.format(dblease.getEffetiveDate()));
+		lease.setExpiredDateString(format.format(dblease.getExpiredDate()));
+		lease.setLeaseStatus(dblease.getLeaseStatus());
+		lease.setDeposit(dblease.getDeposit());
+		return lease;
 	}
 
 	/**
