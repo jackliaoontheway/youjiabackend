@@ -29,28 +29,15 @@ public class LeaseServiceImpl extends EntityServiceImpl<Lease, Integer> implemen
 	@Override
 	public boolean withdrawRequest(Renter renter) {
 		Lease lease = findByRenter(renter);
-		lease.setLeaseStatus(LeaseStatus.WITHDRAWREQUEST.name());
+		lease.setLeaseStatus(LeaseStatus.申请退租.name());
 		this.update(lease.getId(), lease, CommonConstant.systemUserAccountId, CommonConstant.defaultSystemLanguage);
 
 		Room room = lease.getRoom();
-		room.setRoomStatus(RoomStatus.WITHDRAW.name());
+		room.setRoomStatus(RoomStatus.正在退租.name());
 
 		roomService.update(room.getId(), room, CommonConstant.systemUserAccountId,
 				CommonConstant.defaultSystemLanguage);
 
-		return true;
-	}
-
-	@Override
-	public boolean withdrawConfirm(Renter renter) {
-		Lease lease = findByRenter(renter);
-		lease.setLeaseStatus(LeaseStatus.WITHDRAWED.name());
-		this.update(lease.getId(), lease, CommonConstant.systemUserAccountId, CommonConstant.defaultSystemLanguage);
-		
-		Room room = lease.getRoom();
-		room.setRoomStatus(RoomStatus.AVAILABEL.name());
-		roomService.update(room.getId(), room, CommonConstant.systemUserAccountId,
-				CommonConstant.defaultSystemLanguage);
 		return true;
 	}
 }

@@ -7,22 +7,22 @@ public enum LeaseStatus implements I18nResourceKey {
 	/**
 	 * 生效
 	 */
-	AVAILABEL,
+	生效,
 
 	/**
 	 * 申请退租
 	 */
-	WITHDRAWREQUEST,
+	申请退租,
 
 	/**
 	 * 已退租
 	 */
-	WITHDRAWED,
+	已退租,
 
 	/**
 	 * 到期
 	 */
-	EXPIRED;
+	到期;
 
 	@Override
 	public String getI18nResourceKey() {

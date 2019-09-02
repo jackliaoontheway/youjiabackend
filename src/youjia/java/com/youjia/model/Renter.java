@@ -19,7 +19,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@ModelMetaData(label = "租户管理", tabField = "status", tabValues = { "NEW", "ACTIVE", "LOCKED" })
+@ModelMetaData(label = "租户管理", tabField = "status", tabValues = "待审核;审核通过;禁用")
 @Entity
 @Table(name = "renter")
 public @ToString @EqualsAndHashCode(callSuper = false) class Renter extends GenericDbInfo {

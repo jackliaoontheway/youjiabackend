@@ -22,8 +22,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@ModelMetaData(label = "租约管理", tabField = "leaseStatus", tabValues = { "AVAILABEL", "WITHDRAWREQUEST", "WITHDRAWED",
-		"EXPIRED" })
+@ModelMetaData(label = "租约管理", tabField = "leaseStatus", tabValues = "生效;申请退租;已退租;到期")
 @Entity
 @Table(name = "lease")
 public @ToString @EqualsAndHashCode(callSuper = false) class Lease extends GenericDbInfo {
@@ -74,10 +73,10 @@ public @ToString @EqualsAndHashCode(callSuper = false) class Lease extends Gener
 
 	@Transient
 	private @Setter @Getter String buildingNumber;
-	
+
 	@Transient
 	private @Setter @Getter String effetiveDateString;
-	
+
 	@Transient
 	private @Setter @Getter String expiredDateString;
 

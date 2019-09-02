@@ -7,12 +7,12 @@ public enum PayStatus implements I18nResourceKey {
 	/**
 	 * 未交租
 	 */
-	UNPAYED,
+	未交租,
 
 	/**
 	 * 已交租
 	 */
-	PAYED;
+	已交租;
 	
 	@Override
 	public String getI18nResourceKey() {

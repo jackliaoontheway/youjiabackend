@@ -7,22 +7,22 @@ public enum RoomStatus implements I18nResourceKey {
 	/**
 	 * 未租
 	 */
-	AVAILABEL,
+	未租,
 
 	/**
 	 * 预定
 	 */
-	RESERVED,
+	预定,
 
 	/**
 	 * 已租
 	 */
-	RENTED,
+	已租,
 
 	/**
 	 * 正在退租
 	 */
-	WITHDRAW;
+	正在退租;
 
 	@Override
 	public String getI18nResourceKey() {

@@ -17,8 +17,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@ModelMetaData(label = "房间管理", tabField = "roomStatus", tabValues = { "AVAILABEL", "RESERVED", "RENTED",
-		"WITHDRAW" })
+@ModelMetaData(label = "房间管理", tabField = "roomStatus", tabValues =  "未租;预定;已租;正在退租")
 @Entity
 @Table(name = "room")
 public @ToString @EqualsAndHashCode(callSuper = false) class Room extends GenericDbInfo {

@@ -23,6 +23,7 @@ import com.youjia.model.Building;
 import com.youjia.model.Lease;
 import com.youjia.model.RentBill;
 import com.youjia.model.Renter;
+import com.youjia.model.RenterStatus;
 import com.youjia.model.service.BuildingService;
 import com.youjia.model.service.LeaseService;
 import com.youjia.model.service.RentBillService;
@@ -85,6 +86,7 @@ public class ApiController {
 			}
 			renter.setPhoto(photo);
 		}
+		renter.setStatus(RenterStatus.待审核.name());
 		renter = renterService.create(renter, CommonConstant.systemUserAccountId, CommonConstant.defaultSystemLanguage);
 		return renter.getId() != null;
 	}

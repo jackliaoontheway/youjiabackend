@@ -2,6 +2,6 @@ package com.youjia.model;
 
 public enum RenterStatus {
 	
-	NEW,ACTIVE,LOCKED,
+	待审核,审核通过,禁用,
 	
 }

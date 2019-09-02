@@ -20,7 +20,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@ModelMetaData(label = "月账单", tabField = "payStatus", tabValues = { "UNPAYED", "PAYED" })
+@ModelMetaData(label = "月账单", tabField = "payStatus", tabValues = "未交租;已交租")
 @Entity
 @Table(name = "rentbill")
 public @ToString @EqualsAndHashCode(callSuper = false) class RentBill extends GenericDbInfo {
