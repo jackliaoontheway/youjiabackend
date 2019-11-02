@@ -10,7 +10,7 @@
   <properties>
     <pinyin4j.version>2.5.1</pinyin4j.version>
     <poi.version>4.0.0</poi.version>
-    <fileupload.version>1.3.2</fileupload.version>
+    <fileupload.version>1.3.3</fileupload.version>
     <jchardet.version>1.0</jchardet.version>
     <apache.validator.version>1.4.0</apache.validator.version>
     <itextpdf.version>5.5.13</itextpdf.version>
