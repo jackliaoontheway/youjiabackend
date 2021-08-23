@@ -17,7 +17,7 @@
     <itextasian.version>5.2.0</itextasian.version>
     <jwt.version>3.7.0</jwt.version>
     <copper.version>5.0.1</copper.version>
-    <jsoup.version>1.8.3</jsoup.version>
+    <jsoup.version>1.14.2</jsoup.version>
   </properties>
   <parent>
     <groupId>org.springframework.boot</groupId>
